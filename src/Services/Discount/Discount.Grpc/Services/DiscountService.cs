@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
 using AutoMapper;
-using Discount.API.Entities;
 using Discount.API.Repositories;
+using Discount.Grpc.Entities;
 using Discount.Grpc.Protos;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
