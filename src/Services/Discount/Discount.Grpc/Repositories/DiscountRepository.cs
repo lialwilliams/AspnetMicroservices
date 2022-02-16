@@ -5,7 +5,7 @@ using Npgsql;
 using System;
 using System.Threading.Tasks;
 
-namespace Discount.API .Repositories
+namespace Discount.Grpc.Repositories
 {
     public class DiscountRepository : IDiscountRepository
     {
