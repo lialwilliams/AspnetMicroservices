@@ -17,7 +17,6 @@ namespace Basket.API.Controllers
     {
         private readonly IBasketRepository _repository;
         private readonly DiscountGrpcService _discountGrpcService;
-
         private readonly IPublishEndpoint _publishEndpoint;
         private readonly IMapper _mapper;
 
@@ -25,7 +24,6 @@ namespace Basket.API.Controllers
         {
             _repository = repository ?? throw new ArgumentNullException(nameof(repository));
             _discountGrpcService = discountGrpcService ?? throw new ArgumentNullException(nameof(discountGrpcService));
-
             _publishEndpoint = publishEndpoint ?? throw new ArgumentNullException(nameof(publishEndpoint));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
         }
@@ -42,8 +40,8 @@ namespace Basket.API.Controllers
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> UpdateBasket([FromBody] ShoppingCart basket)
         {
-            // Communicate with Discount.Grpc
-            // Calculate latest prices of product into shopping cart
+            // TODO : Communicate with Discount.Grpc
+            // and Calculate latest prices of product into shopping cart
             // consume Discount Grpc
             foreach (var item in basket.Items)
             {
